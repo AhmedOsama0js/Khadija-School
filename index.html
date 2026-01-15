@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta property="og:title" content="نتيجة مدرسة بنك سينا">
+  <meta property="og:description" content="تحقق من نتيجة مدرسة بنك سينا">
+  <meta property="og:image" content="https://github.com/AhmedOsama0js/school/assets/135539823/e05ad591-e7ed-4275-8d18-47217675603c">
+  <meta property="og:url" content="https://ahmedosama0js.github.io/school/">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="./img/img-removebg-preview.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>نتيجة مدرسة بنك سينا - قسم الطالبات</title>
+
+  <style>
+    :root {
+      --primary-pink: #ff85a1;
+      --secondary-purple: #a78bfa;
+    }
+    body {
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+      background-image: url('girls_school_pattern_background_1768471137569.png');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #ff4d6d, #a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn-gradient {
+      background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+      transition: all 0.3s ease;
+    }
+    .btn-gradient:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -10px rgba(255, 117, 140, 0.5);
+    }
+    @keyframes fadeInSlide {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeInSlide 0.6s ease-out forwards;
+    }
+    @keyframes tableUpdateAnimation {
+      0% { opacity: 0; transform: scale(0.98); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    
+    #Name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, transparent, rgba(255, 133, 161, 0.1), transparent);
+    }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #fef2f2; }
+    ::-webkit-scrollbar-thumb { background: #ff85a1; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #ff4d6d; }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center py-4 md:py-10 px-2 md:px-4">
+    <!-- Header Section -->
+    <header class="glass rounded-2xl md:p-8 p-4 max-w-4xl w-full flex flex-col md:flex-row items-center justify-between mb-8 shadow-xl animate-fadeIn">
+      <div class="flex items-center gap-6">
+        <div class="md:p-3 p-2 bg-pink-50 rounded-2xl shadow-inner">
+          <img src="./img/img-removebg-preview.png" alt="logo" class="md:w-16 md:h-16 w-12 h-12 object-contain drop-shadow-md">
+        </div>
+        <div class="text-center md:text-right">
+          <h1 class="text-2xl md:text-3xl font-black gradient-text">مدرسة بنك سيناء</h1>
+          <p class="text-gray-500 font-bold mt-1 text-sm md:text-base">نتيجة نهاية العام الدراسي 2024/2025</p>
+          <span class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-xs font-bold mt-2">قسم الطالبات المتميزات</span>
+        </div>
+      </div>
+      <div class="hidden md:flex flex-col items-end">
+          <div class="w-12 h-1 bg-gradient-to-l from-pink-400 to-transparent rounded-full mb-2"></div>
+          <p class="text-sm text-gray-400 italic">نحو مستقبل أبهى...</p>
+      </div>
+    </header>
+
+    <!-- Main Content Card -->
+    <main class="glass rounded-[2.5rem] p-4 md:p-10 max-w-4xl w-full shadow-2xl animate-fadeIn" style="animation-delay: 0.1s;">
+      <div id="select" class="w-full flex flex-col gap-6 items-center">
+        <div class="w-full max-w-md">
+            <label class="block text-gray-700 font-bold mb-3 mr-2 italic">اختر الصف الدراسي <i class="fa-solid fa-graduation-cap text-pink-400 mr-2"></i></label>
+            <select class="form-select w-full p-4 bg-white/50 border-2 border-pink-100 text-gray-700 font-bold rounded-2xl focus:ring-4 focus:ring-pink-200 focus:border-pink-300 outline-none transition-all cursor-pointer shadow-sm">
+              <option disabled selected>اختار الصف التعليمي...</option>
+              <option value="1">الصف الأول الابتدائي</option>
+              <option value="2">الصف الثاني الابتدائي</option>
+              <option value="3">الصف الثالث الابتدائي</option>
+              <option value="4">الصف الرابع الابتدائي</option>
+              <option value="5">الصف الخامس الابتدائي</option>
+              <option value="6">الصف السادس الابتدائي</option>
+            </select>
+        </div>
+
+        <div class="w-full max-w-md">
+            <label class="block text-gray-700 font-bold mb-3 mr-2 italic" id="inputLabel">رقم الجلوس <i class="fa-solid fa-id-card text-pink-400 mr-2"></i></label>
+            <div class="flex flex-col sm:flex-row gap-3">
+                <input id="gelosInput" type="number" placeholder="أدخلي رقم الجلوس هنا..." 
+                       class="num-gelos flex-1 p-4 bg-white/50 border-2 border-pink-100 text-gray-700 font-bold rounded-2xl focus:ring-4 focus:ring-pink-200 outline-none transition-all shadow-sm">
+                <button id="btn-search" type="button" 
+                        class="btn-gradient px-8 py-4 text-white font-black rounded-2xl shadow-lg flex items-center justify-center gap-2 active:scale-95">
+                    <span>بـحـث</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+      </div>
+
+      <!-- Student Name Display -->
+      <div class="mt-12 flex flex-col items-center">
+          <div id="Name" class="text-2xl md:text-3xl font-black text-gray-800 text-center min-h-[40px] px-6 py-2 rounded-xl"></div>
+          <div class="w-24 h-1.5 bg-pink-100 rounded-full mt-2 self-center"></div>
+      </div>
+
+      <!-- Result Table Area -->
+      <div class="mt-10 overflow-x-auto rounded-3xl shadow-inner bg-white/30 p-2">
+          <table class="table w-full border-separate border-spacing-y-2">
+            <thead id="Table-nat">
+                <!-- Dynamic Header -->
+            </thead>
+            <tbody id="Body-natega" class="font-bold text-gray-700 text-center">
+                <!-- Dynamic Content -->
+            </tbody>
+          </table>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center animate-fadeIn" style="animation-delay: 0.2s;">
+        <div class="glass px-6 py-3 rounded-full shadow-lg border-2 border-white/50 inline-flex items-center gap-4">
+            <span class="text-gray-600 font-bold text-sm">التصميم والبرمجة بواسطة:</span>
+            <a rel="noopener" href="https://www.facebook.com/anahmada.osama/" target="_blank" 
+               class="text-pink-500 font-black hover:text-pink-600 transition-colors flex items-center gap-2 underline decoration-2 underline-offset-4">
+               Ahmed Osama
+            </a>
+        </div>
+    </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
