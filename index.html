@@ -1,199 +1,311 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="البوابة الرسمية لنتائج مدرسة السيدة خديجة بنت خويلد الإعدادية بنات بالعريش. ابحثي عن نتيجتك الآن بسهولة باستخدام رقم الجلوس.">
-  <meta name="keywords" content="مدرسة السيدة خديجة, العريش, نتيجة, مدرسة بنات, مدارس شمال سيناء, نتيجة الامتحانات, الشهادة الإعدادية">
-  <meta name="author" content="Ahmed Osama">
-  <meta name="robots" content="index, follow">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="البوابة الرسمية لنتائج مدرسة السيدة خديجة بنت خويلد الإعدادية بنات بالعريش. ابحثي عن نتيجتك الآن بسهولة باستخدام رقم الجلوس."
+    />
+    <meta
+      name="keywords"
+      content="مدرسة السيدة خديجة, العريش, نتيجة, مدرسة بنات, مدارس شمال سيناء, نتيجة الامتحانات, الشهادة الإعدادية"
+    />
+    <meta name="author" content="Ahmed Osama" />
+    <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ahmedosama0js.github.io/Khadija-School/">
-  <meta property="og:title" content="نتيجة مدرسة السيدة خديجة بنت خويلد الإعدادية بنات بالعريش">
-  <meta property="og:description" content="الرابط الرسمي للحصول على نتائج طالبات مدرسة السيدة خديجة بنت خويلد بالعريش لعام 2024/2025.">
-  <meta property="og:image" content="./img/logo.png">
-  <meta property="og:locale" content="ar_EG">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://ahmedosama0js.github.io/Khadija-School/"
+    />
+    <meta
+      property="og:title"
+      content="نتيجة مدرسة السيدة خديجة بنت خويلد الإعدادية بنات بالعريش"
+    />
+    <meta
+      property="og:description"
+      content="الرابط الرسمي للحصول على نتائج طالبات مدرسة السيدة خديجة بنت خويلد بالعريش لعام 2024/2025."
+    />
+    <meta property="og:image" content="./img/logo.png" />
+    <meta property="og:locale" content="ar_EG" />
 
+    <!-- Theme Color for browsers -->
+    <meta name="theme-color" content="#ff85a1" />
 
-  <!-- Theme Color for browsers -->
-  <meta name="theme-color" content="#ff85a1">
+    <link rel="icon" href="./img/logo.png" />
+    <title>نتيجة مدرسة السيدة خديجة بنت خويلد الإعدادية بنات بالعريش</title>
 
-  <link rel="icon" href="./img/logo.png">
-  <title>نتيجة مدرسة السيدة خديجة بنت خويلد الإعدادية بنات بالعريش</title>
+    <!-- CDNs & Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;500;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- CDNs & Fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-pink: #ff85a1;
+        --secondary-purple: #a78bfa;
+      }
+      body {
+        font-family: "Tajawal", "Cairo", sans-serif;
+        background-image: url("img/girls_school_pattern_background_1768471137569.png");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.75);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #ff4d6d, #a78bfa);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .btn-gradient {
+        background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+        transition: all 0.3s ease;
+      }
+      .btn-gradient:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -10px rgba(255, 117, 140, 0.5);
+      }
+      @keyframes fadeInSlide {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeIn {
+        animation: fadeInSlide 0.6s ease-out forwards;
+      }
+      @keyframes tableUpdateAnimation {
+        0% {
+          opacity: 0;
+          transform: scale(0.98);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
 
-  <style>
-    :root {
-      --primary-pink: #ff85a1;
-      --secondary-purple: #a78bfa;
-    }
-    body {
-      font-family:  'Tajawal','Cairo', sans-serif;
-      background-image: url('img/girls_school_pattern_background_1768471137569.png');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-    }
-    .glass {
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    .gradient-text {
-      background: linear-gradient(135deg, #ff4d6d, #a78bfa);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .btn-gradient {
-      background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
-      transition: all 0.3s ease;
-    }
-    .btn-gradient:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px -10px rgba(255, 117, 140, 0.5);
-    }
-    @keyframes fadeInSlide {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fadeIn {
-      animation: fadeInSlide 0.6s ease-out forwards;
-    }
-    @keyframes tableUpdateAnimation {
-      0% { opacity: 0; transform: scale(0.98); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-    
-    #Name {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(to right, transparent, rgba(255, 133, 161, 0.1), transparent);
-    }
-    
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #fef2f2; }
-    ::-webkit-scrollbar-thumb { background: #ff85a1; border-radius: 10px; }
-    ::-webkit-scrollbar-thumb:hover { background: #ff4d6d; }
-    /* Animated Border for Footer */
-    @keyframes rotateBorder {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .animated-border {
-      position: relative;
-      padding: 2px;
-      overflow: hidden;
-      border-radius: 9999px;
-    }
-    .animated-border::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: conic-gradient(transparent, #ff758c, #a78bfa, transparent 30%);
-      animation: rotateBorder 4s linear infinite;
-    }
-    .animated-border-content {
-      position: relative;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(8px);
-      border-radius: 9999px;
-      z-index: 10;
-    }
-  </style>
-</head>
+      #Name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          to right,
+          transparent,
+          rgba(255, 133, 161, 0.1),
+          transparent
+        );
+      }
 
-<body class="min-h-screen flex flex-col items-center py-4 md:py-10 px-2 md:px-4">
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fef2f2;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ff85a1;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff4d6d;
+      }
+      /* Animated Border for Footer */
+      @keyframes rotateBorder {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .animated-border {
+        position: relative;
+        padding: 2px;
+        overflow: hidden;
+        border-radius: 9999px;
+      }
+      .animated-border::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: conic-gradient(
+          transparent,
+          #ff758c,
+          #a78bfa,
+          transparent 30%
+        );
+        animation: rotateBorder 4s linear infinite;
+      }
+      .animated-border-content {
+        position: relative;
+        background: rgba(255, 255, 255, 0.9);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border-radius: 9999px;
+        z-index: 10;
+      }
+    </style>
+  </head>
+
+  <body
+    class="min-h-screen flex flex-col items-center py-4 md:py-10 px-2 md:px-4"
+  >
     <!-- Header Section -->
-    <header class="glass rounded-2xl md:p-8 p-4 max-w-4xl w-full flex flex-col md:flex-row items-center justify-between mb-8 shadow-xl animate-fadeIn">
+    <header
+      class="glass rounded-2xl md:p-8 p-4 max-w-4xl w-full flex flex-col md:flex-row items-center justify-between mb-8 shadow-xl animate-fadeIn"
+    >
       <div class="flex items-center gap-6">
         <div class="md:p-3 p-2 bg-pink-50 rounded-2xl shadow-inner">
-          <img src="./img/logo.png" alt="logo" class="md:w-16 md:h-16 w-12 h-12 object-contain drop-shadow-md">
+          <img
+            src="./img/logo.png"
+            alt="logo"
+            class="md:w-16 md:h-16 w-12 h-12 object-contain drop-shadow-md"
+          />
         </div>
         <div class="text-center md:text-right">
-          <h1 class="text-2xl md:text-3xl font-black gradient-text">خديجة بنت خويلد الإعدادية</h1>
-          <p class="text-gray-500 font-bold mt-1 text-sm md:text-base">نتيجة نهاية العام الدراسي 2026/2025</p>
+          <h1 class="text-2xl md:text-3xl font-black gradient-text">
+            خديجة بنت خويلد الإعدادية بنات
+          </h1>
+          <p class="text-gray-500 font-bold mt-1 text-sm md:text-base">
+            نتيجة نهاية العام الدراسي 2026/2025
+          </p>
         </div>
       </div>
       <div class="hidden md:flex flex-col items-end">
-          <div class="w-12 h-1 bg-gradient-to-l from-pink-400 to-transparent rounded-full mb-2"></div>
-          <p class="text-sm text-gray-400 italic">نحو مستقبل أبهى...</p>
+        <div
+          class="w-12 h-1 bg-gradient-to-l from-pink-400 to-transparent rounded-full mb-2"
+        ></div>
+        <p class="text-sm text-gray-400 italic">نحو مستقبل أبهى...</p>
       </div>
     </header>
 
     <!-- Main Content Card -->
-    <main class="glass rounded-2xl md:p-10 p-4 max-w-4xl w-full shadow-2xl animate-fadeIn" style="animation-delay: 0.1s;">
+    <main
+      class="glass rounded-2xl md:p-10 p-4 max-w-4xl w-full shadow-2xl animate-fadeIn"
+      style="animation-delay: 0.1s"
+    >
       <div id="select" class="w-full flex flex-col gap-6 items-center">
         <div class="w-full max-w-md">
-            <label class="block text-gray-700 font-bold mb-3 mr-2 italic">اختر الصف الدراسي <i class="fa-solid fa-graduation-cap text-pink-400 mr-2"></i></label>
-            <select class="form-select w-full md:p-4 p-2 bg-white/50 border-2 border-pink-100 text-gray-700 font-bold rounded-2xl focus:ring-4 focus:ring-pink-200 focus:border-pink-300 outline-none transition-all cursor-pointer shadow-sm">
-              <option disabled selected>اختار الصف التعليمي...</option>
-              <option value="1">الصف الأول الإعدادي</option>
-              <option value="2">الصف الثاني الإعدادي</option>
-            </select>
+          <label class="block text-gray-700 font-bold mb-3 mr-2 italic"
+            >اختر الصف الدراسي
+            <i class="fa-solid fa-graduation-cap text-pink-400 mr-2"></i
+          ></label>
+          <select
+            title="اختر الصف"
+            class="form-select w-full md:p-4 p-2 bg-white/50 border-2 border-pink-100 text-gray-700 font-bold rounded-2xl focus:ring-4 focus:ring-pink-200 focus:border-pink-300 outline-none transition-all cursor-pointer shadow-sm"
+          >
+            <option disabled selected>اختار الصف التعليمي...</option>
+            <option value="1">الصف الأول الإعدادي</option>
+            <option value="2">الصف الثاني الإعدادي</option>
+          </select>
         </div>
 
         <div class="w-full max-w-md">
-            <label class="block text-gray-700 font-bold mb-3 mr-2 italic" id="inputLabel">رقم الجلوس <i class="fa-solid fa-id-card text-pink-400 mr-2"></i></label>
-            <div class="flex flex-col sm:flex-row gap-3">
-                <input id="gelosInput" type="number" placeholder="أدخلي رقم الجلوس هنا..." 
-                       class="num-gelos flex-1 md:p-4 p-2 bg-white/50 border-2 border-pink-100 text-gray-700 font-bold rounded-2xl focus:ring-4 focus:ring-pink-200 outline-none transition-all shadow-sm">
-                <button id="btn-search" type="button" 
-                        class="btn-gradient md:px-8 md:py-4 px-6 py-2 text-white font-black rounded-2xl shadow-lg flex items-center justify-center gap-2 active:scale-95">
-                    <span>بـحـث</span>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
+          <label
+            class="block text-gray-700 font-bold mb-3 mr-2 italic"
+            id="inputLabel"
+            >رقم الجلوس <i class="fa-solid fa-id-card text-pink-400 mr-2"></i
+          ></label>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <input
+              id="gelosInput"
+              type="number"
+              placeholder="أدخلي رقم الجلوس هنا..."
+              class="num-gelos flex-1 md:p-4 p-2 bg-white/50 border-2 border-pink-100 text-gray-700 font-bold rounded-2xl focus:ring-4 focus:ring-pink-200 outline-none transition-all shadow-sm"
+            />
+            <button
+              id="btn-search"
+              type="button"
+              class="btn-gradient md:px-8 md:py-4 px-6 py-2 text-white font-black rounded-2xl shadow-lg flex items-center justify-center gap-2 active:scale-95"
+            >
+              <span>بـحـث</span>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
         </div>
       </div>
 
       <!-- Student Name Display -->
-      <div class=" md:mt-8 mt-4 flex flex-col items-center">
-          <div id="Name" class="text-2xl md:text-3xl font-black text-gray-800 text-center min-h-[40px] px-6 py-2 rounded-xl"></div>
-          <div class="w-24 h-1.5 bg-pink-100 rounded-full mt-2 self-center"></div>
+      <div class="md:mt-8 mt-4 flex flex-col items-center">
+        <div
+          id="Name"
+          class="text-2xl md:text-3xl font-black text-gray-800 text-center min-h-[40px] px-6 py-2 rounded-xl"
+        ></div>
+        <div class="w-24 h-1.5 bg-pink-100 rounded-full mt-2 self-center"></div>
       </div>
 
       <!-- Result Table Area -->
-      <div class="md:mt-8 mt-4 overflow-x-auto rounded-3xl shadow-inner bg-white/30 p-2">
-          <table class="table w-full border-separate border-spacing-y-2">
-            <thead id="Table-nat">
-                <!-- Dynamic Header -->
-            </thead>
-            <tbody id="Body-natega" class="font-bold text-gray-700 text-center">
-                <!-- Dynamic Content -->
-            </tbody>
-          </table>
+      <div
+        class="md:mt-8 mt-4 overflow-x-auto rounded-3xl shadow-inner bg-white/30 p-2"
+      >
+        <table class="table w-full border-separate border-spacing-y-2">
+          <thead id="Table-nat">
+            <!-- Dynamic Header -->
+          </thead>
+          <tbody id="Body-natega" class="font-bold text-gray-700 text-center">
+            <!-- Dynamic Content -->
+          </tbody>
+        </table>
       </div>
     </main>
 
     <!-- Footer -->
-    <footer class="md:mt-10 mt-8 text-center animate-fadeIn" style="animation-delay: 0.3s;">
-        <div class="inline-block p-[2px] rounded-full overflow-hidden animated-border group">
-            <div class="animated-border-content md:px-8 md:py-3 px-6 py-2 flex flex-row items-center gap-2 md:gap-4">
-                <span class="text-gray-500 font-bold text-sm tracking-wider uppercase"> تصميم  و تنفيز:</span>
-                <a rel="noopener" href="https://www.facebook.com/anahmada.osama/" target="_blank" 
-                   class="relative text-pink-600 font-black text-lg tracking-tight transition-all duration-300">
-                   Ahmed Osama
-                   <span class="absolute -bottom-1 left-0 w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-all duration-500 group-hover:w-full"></span>
-                </a>
-            </div>
+    <footer
+      class="md:mt-10 mt-8 text-center animate-fadeIn"
+      style="animation-delay: 0.3s"
+    >
+      <div
+        class="inline-block p-[2px] rounded-full overflow-hidden animated-border group"
+      >
+        <div
+          class="animated-border-content md:px-8 md:py-3 px-6 py-2 flex flex-row items-center gap-2 md:gap-4"
+        >
+          <span
+            class="text-gray-500 font-bold text-sm tracking-wider uppercase"
+          >
+            تصميم و تنفيذ:</span
+          >
+          <a
+            rel="noopener"
+            href="https://www.facebook.com/anahmada.osama/"
+            target="_blank"
+            class="relative text-pink-600 font-black text-lg tracking-tight transition-all duration-300"
+          >
+            Ahmed Osama
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-1 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full transition-all duration-500 group-hover:w-full"
+            ></span>
+          </a>
         </div>
+      </div>
     </footer>
 
-  <script src="./app.js"></script>
-</body>
+    <script src="./app.js"></script>
+  </body>
 </html>
