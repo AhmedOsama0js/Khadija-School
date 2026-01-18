@@ -11,10 +11,10 @@ let arr;
 
 let student;
 
-fetch("./Data2026.json")
+fetch("./Khadija.json")
   .then((res) => res.json())
   .then((data) => {
-    const { first, second, third, fourth, fifth, Sixth } = data;
+    const { first, second} = data;
 
     btnSearch.addEventListener("click", () => {
       const studentId = numGelos.value;
@@ -28,18 +28,6 @@ fetch("./Data2026.json")
         case "2":
           selectedGradeData = second;
           break;
-        case "3":
-          selectedGradeData = third;
-          break;
-        case "4":
-          selectedGradeData = fourth;
-          break;
-        case "5":
-          selectedGradeData = fifth;
-          break;
-        case "6":
-          selectedGradeData = Sixth;
-          break;
         default:
           deleteData("اختر الصف أولا");
           return;
@@ -51,29 +39,15 @@ fetch("./Data2026.json")
   });
 
 select.addEventListener("change", () => {
-  const selectedValue = select.value;
-  const isIdBased = selectedValue === "1" || selectedValue === "2";
-
-  const labelText = isIdBased ? "الرقم القومي" : "رقم الجلوس";
-  const placeholderText = isIdBased ? "الرقم القومي" : "ادخل رقم الجلوس";
-
-  inputLabel.textContent = labelText;
-  gelosInput.placeholder = placeholderText;
+  inputLabel.textContent = "رقم الجلوس";
+  gelosInput.placeholder = "ادخل رقم الجلوس";
 });
 
 const handleStudentData = (data, id) => {
-  const isIdBased = student === "1" || student === "2";
-  const label = isIdBased
-    ? " اول 3 ارقام في الرقم القومي من جهة اليمين"
-    : "رقم الجلوس";
+  const label = "رقم الجلوس";
 
-  const studentData = data.find((student) => {
-    if (isIdBased) {
-      const nationalIdLast3 = `${student.Student_ID}`?.slice(-3);
-      return nationalIdLast3 === id;
-    } else {
-      return student.Student_ID == id;
-    }
+  const studentData = data.find((item) => {
+    return item.Student_ID == id;
   });
 
   if (studentData) {
@@ -104,34 +78,30 @@ const printDATA = (studentData) => {
   
   const subjects = [
     { label: "العربي", value: studentData.Arabic },
-    { label: "الرياضيات", value: studentData.mathematics },
-    { label: "الانجليزي", value: studentData.english },
-    { label: "الدين", value: studentData.Religious_Education }
+    { label: "الانجليزي", value: studentData[" english"] || studentData.english },
+    { label: "الرياضيات", value: studentData[" mathematics"] || studentData.mathematics },
+    { label: "العلوم", value: studentData.Sciences },
+    { label: "الدراسات", value: studentData.Social_Studies },
+    { label: "الدين", value: studentData.Religious_Education },
+    { label: "الحاسب الآلي", value: studentData.technology },
+    { label: "التربية الفنية", value: studentData.art },
+    { label: "التربية الرياضية", value: studentData.physical_education },
+    { label: "نشاط 1", value: studentData.Activity_1 },
+    { label: "نشاط 2", value: studentData.Activity_2 }
   ];
 
-  if (+student === 1 || +student === 2 || +student === 3) {
-    subjects.push(
-      { label: "متعدد التخصصات", value: studentData.Multidisciplinary },
-      { label: "التربية البدنية والصحية", value: studentData.physical_education }
-    );
-  } else {
-    subjects.push(
-      { label: "الدراسات", value: studentData.Social_Studies },
-      { label: "العلوم", value: studentData.Sciences },
-      { label: "مهارات مهنية", value: studentData.Professional_skills },
-      { label: "تكنولوجيا المعلومات", value: studentData.technology },
-      { label: "التربية البدنية", value: studentData.physical_education },
-      { label: "التربية الفنية", value: studentData.art },
-      { label: "التربية الموسيقية", value: studentData.Music }
-    );
+  // إضافة الموسيقى إذا وجدت (موجودة في أولى وغير موجودة في تانية غالباً)
+  if (studentData["Music "] !== undefined || studentData.Music !== undefined) {
+    subjects.push({ label: "التربية الموسيقية", value: studentData["Music "] || studentData.Music });
   }
 
-  subjects.push(
-    { label: "القيم واحترام الآخر", value: studentData.Values_and_respect },
-    { label: "أنشطة التوكاتسو", value: studentData.Tokatsu_activities }
-  );
+  // إضافة المجموع الكلي
+  const totalValue = studentData.Total || studentData.total;
+  if (totalValue !== undefined) {
+    subjects.push({ label: "المجموع الكلي", value: totalValue });
+  }
 
-  BODY.innerHTML = subjects.map(sub => `
+  BODY.innerHTML = subjects.filter(sub => sub.value !== undefined).map(sub => `
     <tr class="animate-fadeIn bg-white/60 hover:bg-white/80 transition-all duration-300">
       <td class="p-4 rounded-r-2xl border-l-[3px] border-pink-200">${sub.label}</td>
       <td class="p-4 rounded-l-2xl font-black text-pink-600">${sub.value}</td>
